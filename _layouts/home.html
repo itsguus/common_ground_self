@@ -1,0 +1,52 @@
+{% include header.html %}
+
+<section class="intro fullscreen">
+    <figure>
+        <img src="/uploads/1.jpeg" alt="Common grounds video">
+    </figure>
+    <img src="/img/beeld.svg" alt="Camp Common grounds logo">
+    <a href="" class="book">
+        Boeken
+    </a>
+</section>
+
+<section class="info">
+    <article>
+        {{ content }}
+    </article>
+    <h3><time datetime="2021-07-07">7 Juli</time> - <time datetime="2021-09-6">6 September 2021</time></h3>
+    <ul>
+        {% for item in page.blocks %}
+            <li>
+                <img src="/img/star.svg" alt="COMMON GROUNDS LOGO">
+                <h2>{{ item.title }}</h2>
+                <p>{{ item.text }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section class="program">
+    <figure>
+        <img src="{{ page.programma_image }}" alt="Common grounds festival coen en nadia">
+    </figure>
+    <div class="content">
+        <div class="md">
+            {{ page.programmma_lijst_markdown | markdownify }}
+        </div>
+        <p>{{ page.programma_text }}</p>
+        <a href="/programma/" class="book">Programma</a>
+    </div>
+</section>
+
+<section class="ons-verhaal">
+    <div>
+        <p>{{ page.ons_verhaal_text }}</p>
+        <a href="/ons-verhaal/" class="book">Ons verhaal</a>
+    </div>
+    <figure>
+        <img src="{{ page.ons_verhaal_image }}" alt="Camp common grounds dinertafel">
+    </figure>
+</section>
+
+{% include footer.html %}

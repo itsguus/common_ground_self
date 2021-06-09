@@ -1,0 +1,11 @@
+mainmenu: 
+  - title: Boeken
+    url: /boeken/
+  - title: Programma
+    url: /programma/
+  - title: Camp
+    url: /camp-common-grounds/
+  - title: Ons Verhaal
+    url: /ons-verhaal/
+  - title: FAQ
+    url: /faq/ 

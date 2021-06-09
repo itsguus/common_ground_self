@@ -37,5 +37,9 @@
 <link rel="stylesheet" href="{{ "/css/fonts.css" | prepend: site.baseurl }}">
 
 </head>
-<body class="{{ page.layout }}" id="top">
+{% if page.layout == 'home' or
+      page.layout == 'programma' or 
+      page.layout == 'faq %} {% assign color = 'green' %}
+{% else %}{% assign color = red %}{% endif %}
+<body class="{{ color }} {{ page.layout }}" id="top">
 {% include navigation.html %}

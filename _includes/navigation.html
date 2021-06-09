@@ -1,4 +1,27 @@
 <header>
-
+    {% assign nav = site.data.navigation.mainmenu %}
+    <nav class="desktop">
+        <ul>
+            <li><a href="/"><img src="/img/stars.svg" alt="Common Grounds"></a></li>
+            {% for item in nav %}
+                <li {% if item.url == page.url %} class="active"{% endif%}><a href="{{ item.url }}">{{ item.title }}</a> </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <input type="checkbox" class="burger">
+    <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="mobile">
+        <ul>
+            <li {% if page.url == '/' %}class="active" {% endif %} ><a href="/">Home</a></li>
+            {% for item in nav %}
+                <li {% if item.url == page.url %} class="active"{% endif%}><a href="{{ item.url }}">{{ item.title }}</a> </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <div class="underlay" onclick="this.parentNode.querySelector('input').checked = false;"></div>
 </header>
 <main> 
