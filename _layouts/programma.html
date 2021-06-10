@@ -1,0 +1,37 @@
+{% include header.html %}
+
+<section class="intro text fullscreen">
+    <figure>
+        <img src="{{ page.image }}" alt="Common grounds video">
+    </figure>
+    <div>
+        <h1>{{ page.title }}</h1>
+        <img src="/img/stars.svg" alt="Common grounds stars">
+    </div>
+</section>
+
+<section class="info">
+    <article>
+        {{ content }}
+    </article>
+    <a href="/boeken" class="book center">Boeken</a>
+    <img class="stars grey" src="/img/stars.svg" alt="Common grounds stars">
+</section>
+
+{% for item in page.text_blocks %}
+{% assign count = forloop.index0 | modulo: 2 %}
+<section class="text_block count{{ count }}">
+    <figure>
+        <img src="{{ item.image }}" alt="Common grounds impression">
+    </figure>
+    <article>
+        {{ item.markdown | markdownify }}
+    </article>
+</section>
+{% endfor %}
+
+<section class="book">
+    <a href="/boeken/" class="book">Bekijk campingplekken</a>
+</section>
+
+{% include footer.html %}

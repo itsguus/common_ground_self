@@ -1,0 +1,29 @@
+{% include header.html %}
+
+<section class="intro fullscreen">
+    <figure>
+        <img src="{{ page.image }}" alt="Common grounds video">
+    </figure>
+    <img src="/img/beeld.svg" alt="Camp Common grounds logo">
+    <h3><time datetime="2021-07-07">7 Juli</time> - <time datetime="2021-09-6">6 September 2021</time></h3>
+    <p>{{ content | strip_html }}</p>
+</section>
+
+{% for item in page.text_blocks %}
+{% assign count = forloop.index | modulo: 2 %}
+<section class="text_block count{{ count }}">
+    <figure>
+        <img src="{{ item.image }}" alt="Common grounds impression">
+    </figure>
+    <article {% if item._first %}class="title"{% endif %}>
+        {{ item.markdown | markdownify }}
+        {% if item.button %}<a href="{{ item.url }}" class="book">{{ item.text_button }}</a>{% endif %}
+    </article>
+</section>
+{% if forloop.index == 2 %}<img class="stars" src="/img/stars.svg" alt="Common grounds stars">{% endif %}
+
+{% endfor %}
+
+
+
+{% include footer.html %}

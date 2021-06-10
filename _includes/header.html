@@ -39,7 +39,13 @@
 </head>
 {% if page.layout == 'home' or
       page.layout == 'programma' or 
-      page.layout == 'faq %} {% assign color = 'green' %}
-{% else %}{% assign color = red %}{% endif %}
-<body class="{{ color }} {{ page.layout }}" id="top">
+      page.layout == 'contact' or 
+      page.layout == 'ons-verhaal' %} {% assign color = 'green' %}
+{% else %}{% assign color = 'red' %}{% endif %}
+
+{% if page.layout == 'page' or
+      page.layout == 'contact' or
+      page.layout == 'thanks' or
+      page.layout == 'faq' %}{% assign style = 'dry' %}{% endif %}
+<body class="{{ style }} {{ color }} {{ page.layout }}" id="top">
 {% include navigation.html %}

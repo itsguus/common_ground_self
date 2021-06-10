@@ -1,6 +1,15 @@
 </main>
 <footer>
-
+    {% assign footer = site.data.navigation.footer %}
+    <nav><ul>
+        {% for list in footer %}
+        <li><ul>
+            {% for item in list %}
+                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul></li>
+        {% endfor %}
+    </ul></nav>
 </footer>
 <script type="text/javascript" src="/js/script.js"></script>
 </body>

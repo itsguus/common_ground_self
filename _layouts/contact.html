@@ -1,0 +1,27 @@
+{% include header.html %}
+
+<section class="faq">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+    
+    <form method="post" action="/bedankt">
+        <input type="hidden" name="_to" value="{{ page.email_to}}">
+        <input type="text" name="_gotcha" style="display: none;">
+
+        <label>Naam</label>
+        <input type="text" name="naam" required> 
+        
+        <label>Email Address</label>
+        <input type="email" name="email" required> 
+      
+        <label>Bericht</label>
+        <textarea required name="bericht"></textarea>
+      
+        <div class="inputbox">
+            <input type="submit" value="Verzenden">
+        </div>
+      </form>
+      
+</section>
+
+{% include footer.html %}

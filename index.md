@@ -1,6 +1,7 @@
 ---
 title: Home
 layout: home
+image: /uploads/1.jpeg
 blocks: 
  - title: Eenmalig & Uniek
    text: >-
@@ -25,6 +26,10 @@ programma_text: >-
 ons_verhaal_image: /uploads/6.jpeg
 ons_verhaal_text: >- 
     Onder het credo "it takes a village to build a dream", bouwden wij een magische kampeerervaring waarin verbeelding en verbinding centraal moeten staan. Het decor; een oud manegeneterrein waar in 2022 Europa's meest duurzame wijk zal verrijzen.
+camping_text: >-
+    Nimmerdor - of altijd groen - is de naam van het bos dat Camp Common Grounds haar thuis noemt. Het naastgelegen natuurgebied Den Treek wordt met haar vennen, heide, meren en uitgestreke zandverstuiving als beschouwd als een van de mooiste plekken van Nederland
+camping_first_image: /uploads/3.jpeg
+camping_second_image: /uploads/4.jpeg
 ---
 
 ## Kop 2

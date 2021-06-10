@@ -2,7 +2,9 @@
     {% assign nav = site.data.navigation.mainmenu %}
     <nav class="desktop">
         <ul>
-            <li><a href="/"><img src="/img/stars.svg" alt="Common Grounds"></a></li>
+            {% if page.layout == 'home' %}<li><a href="/"><img src="/img/stars.svg" alt="Common Grounds"></a></li>{% else %}
+            <li><a href="/"><img src="/img/beeld_naked.svg" alt="Common Grounds"></a></li>{% endif %}
+
             {% for item in nav %}
                 <li {% if item.url == page.url %} class="active"{% endif%}><a href="{{ item.url }}">{{ item.title }}</a> </li>
             {% endfor %}

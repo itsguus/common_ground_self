@@ -1,0 +1,32 @@
+{% include header.html %}
+
+<section class="intro text fullscreen">
+    <figure>
+        <img src="{{ page.image }}" alt="Common grounds video">
+    </figure>
+    <div>
+        <h1>{{ page.title }}</h1>
+        <img src="/img/stars.svg" alt="Common grounds stars">
+    </div>
+</section>
+
+<section class="info">
+    <article>
+        {{ content }}
+    </article>
+</section>
+
+<section class="poem">
+    <img src="/uploads/1.jpeg" alt="">
+    <audio src="{{ page.audio_document }}"></audio>
+    <article>
+        {{ page.gedicht_markdown | markdownify }}
+    </article>
+</section>
+
+<div id="audio">
+    <input type="checkbox"  onclick='toggleAudio(this);'>
+    <img src="/img/500px-Speaker_Icon.svg.png" alt="Audio icon">
+</div>
+
+{% include footer.html %}

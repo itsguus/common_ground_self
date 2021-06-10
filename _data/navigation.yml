@@ -4,8 +4,32 @@ mainmenu:
   - title: Programma
     url: /programma/
   - title: Camp
-    url: /camp-common-grounds/
+    url: /camp/
   - title: Ons Verhaal
     url: /ons-verhaal/
   - title: FAQ
     url: /faq/ 
+
+
+footer: 
+    -  
+        - title: Privacy Policy
+          url: /privacy-policy/
+        - title: Cookie Policy
+          url: /cookie-policy/
+        - title: Algemene voorwaarden
+          url: /algemene-voorwaarden/
+    -  
+        - title: FB
+          url: 
+        - title: IG
+          url:
+        - title: LI
+          url:
+    - 
+        - title: FAQ
+          url: /faq/
+        # - title: Nieuws
+        #   url: /nieuws/
+        - title: Contact
+          url: /contact/

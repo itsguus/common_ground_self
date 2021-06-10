@@ -2,7 +2,7 @@
 
 <section class="intro fullscreen">
     <figure>
-        <img src="/uploads/1.jpeg" alt="Common grounds video">
+        <img src="{{ page.image }}" alt="Common grounds video">
     </figure>
     <img src="/img/beeld.svg" alt="Camp Common grounds logo">
     <a href="" class="book">
@@ -48,5 +48,20 @@
         <img src="{{ page.ons_verhaal_image }}" alt="Camp common grounds dinertafel">
     </figure>
 </section>
+
+<section class="camp">
+    <div>
+        <p>{{ page.camping_text }}</p>
+        <a class="book" href="/camp/">De camping</a>
+    </div>
+    <figure><img src="{{ page.camping_first_image }}" alt="Camp common grounds impression"></figure>
+    <figure><img src="{{ page.camping_second_image }}" alt="Camp common grounds impression"></figure>
+</section>
+
+
+<section class="book">
+    <a href="/boeken/" class="book">Bekijk campingplekken</a>
+</section>
+
 
 {% include footer.html %}

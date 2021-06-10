@@ -1,0 +1,12 @@
+{% include header.html %}
+
+<section class="faq">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+    {% for section in page.sections %}
+        <h2>{{ section.title }}</h2>
+            {% include accordion.html content=section.questions title=section.title %}
+    {% endfor %}
+</section>
+
+{% include footer.html %}
